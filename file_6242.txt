@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+        .container {
+            background-color: #fff;
+            padding: 2em 3em;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            max-width: 500px;
+        }
+        h1 {
+            color: #4a90e2;
+            margin-bottom: 0.5em;
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.5;
+            margin-bottom: 1.5em;
+        }
+        button {
+            padding: 12px 25px;
+            font-size: 17px;
+            cursor: pointer;
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            outline: none;
+        }
+        button:hover {
+            background-color: #357ABD;
+            transform: translateY(-2px);
+        }
+        button:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello from Unit undefined!</h1>
+        <p id="dynamicMessage">This is a simple web page. Click the button below to see some interaction!</p>
+        <button id="actionButton">Change Text</button>
+    </div>
+
+    <script>
+        document.getElementById('actionButton').addEventListener('click', function() {
+            const messageElement = document.getElementById('dynamicMessage');
+            if (messageElement.textContent === 'This is a simple web page. Click the button below to see some interaction!') {
+                messageElement.textContent = 'Wow! You just changed the text. Isn\'t that neat?';
+            } else {
+                messageElement.textContent = 'This is a simple web page. Click the button below to see some interaction!';
+            }
+        });
+    </script>
+</body>
+</html>
