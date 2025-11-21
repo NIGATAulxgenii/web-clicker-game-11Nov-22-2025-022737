@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undefined Project</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        #output {
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div id="output"></div>
+
+    <script>
+        // Get the output div element
+        const outputDiv = document.getElementById('output');
+
+        // Define a simple function
+        function greetUser(name = "World") {
+            const message = `Hello, ${name}! This is an undefined project.`;
+            console.log(message); // Log to console
+            return message;
+        }
+
+        // Call the function and display its result in the div
+        outputDiv.textContent = greetUser();
+
+        // You can also try with a different name
+        // setTimeout(() => {
+        //     outputDiv.textContent = greetUser("Developer");
+        // }, 2000);
+    </script>
+</body>
+</html>
